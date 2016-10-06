@@ -1,0 +1,24 @@
+layer20
+layer20
+final layer
+3
+(500, 16)
+(500, 3)
+test155.866
+train182.646
+test2.35565
+train3.62146
+test1.82924
+train2.65525
+test1.76181
+train2.49856
+test1.74313
+train2.44936
+test1.74048
+train2.4325
+final cost1.74038
+The number of feature and label:	16, 3
+The layers of the network:	[16, 20, 20, 3]
+The number of training data:	58000
+A example of the feature data:	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 6.0, 1.0, 0.0, -1.0, 1.0, -1.0, -1.0]
+A example of the label data:	[12.0, 12.9, 9.5]

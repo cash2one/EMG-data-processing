@@ -28,16 +28,16 @@ class DBN(object):
       self.biases.append(bias)
       weight_vars.extend((weight, bias))
       if i < len(layers) -1:
-        print 'layer', layers[i]
+        print >> sys.stderr, 'layer' + str(layers[i])
         op = tf.nn.dropout(tf.nn.relu(tf.nn.xw_plus_b(next_layer, weight, bias)),
                            self.keep_prob)
       else:
-        print 'final layer'
+        print >> sys.stderr, 'final layer'
         op = tf.nn.dropout(tf.nn.relu(tf.nn.xw_plus_b(next_layer, weight, bias)),
                            1.0)
       self.network_layers.append(op)
       next_layer = op
-    print len(self.network_layers)
+    print >> sys.stderr, len(self.network_layers)
     self.output_layer = next_layer
 
     # Experimental loss function.
@@ -64,8 +64,8 @@ class DBN(object):
     count = 0
     current_cost = 0
     total_updates = 0
-    print batch[0].shape
-    print batch[1].shape
+    print >> sys.stderr, batch[0].shape
+    print >> sys.stderr, batch[1].shape
     for epoch in range(self.iters):
       while count < row:
         if total_updates % 1000 == 0:
@@ -73,13 +73,13 @@ class DBN(object):
                                                 self.ref_output: test_targets,
                                                 self.keep_prob: 1.0,
                                                 self.input_keep_prob: 1.0})
-          print 'test', cost
+          print >> sys.stderr, 'test' + str(cost)
           current_cost = sess.run(self.cost,
                                 feed_dict={self.input_layer: inputs,
                                            self.ref_output: targets,
                                            self.keep_prob: 1.0,
                                            self.input_keep_prob: 1.0})
-          print 'train', current_cost
+          print >> sys.stderr, 'train' + str(current_cost)
         sess.run(self.update_weights, feed_dict={self.input_layer: batch[0],
                                                  self.ref_output: batch[1],
                                                  self.keep_prob: 1.0,
@@ -92,7 +92,7 @@ class DBN(object):
                                                self.ref_output: test_targets,
                                                self.keep_prob: 1.0,
                                                self.input_keep_prob: 1.0})
-    print 'final cost', final_cost
+    print >> sys.stderr, 'final cost' + str(final_cost)
     train_outputs = sess.run(self.output_layer,
                              feed_dict={self.input_layer: inputs,
                                         self.keep_prob: 1.0,
