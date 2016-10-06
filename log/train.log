@@ -1,24 +1,65 @@
-layer20
-layer20
+layer5
 final layer
-3
-(500, 16)
-(500, 3)
-test155.866
-train182.646
-test2.35565
-train3.62146
-test1.82924
-train2.65525
-test1.76181
-train2.49856
-test1.74313
-train2.44936
-test1.74048
-train2.4325
-final cost1.74038
+2
+(100, 16)
+(100, 3)
+test29.9516
+train35.9172
+test12.6716
+train16.8976
+test9.74533
+train13.542
+test8.91696
+train12.5091
+test8.61017
+train12.0811
+test8.46841
+train11.8458
+test8.39241
+train11.7023
+test8.33316
+train11.5973
+test8.28844
+train11.5189
+test8.23706
+train11.4595
+test8.19824
+train11.412
+test8.15552
+train11.3602
+test7.61101
+train10.9274
+test7.50279
+train10.8355
+test7.42474
+train10.7541
+test7.30517
+train10.596
+test7.1325
+train10.4082
+test7.09452
+train10.3581
+test7.05214
+train10.3215
+test7.02038
+train10.2851
+test6.99604
+train10.2497
+test6.97936
+train10.2195
+test6.95325
+train10.1885
+test6.93786
+train10.1629
+test6.93554
+train10.154
+test6.89575
+train10.1244
+test6.88548
+train10.1105
+final cost6.91954
 The number of feature and label:	16, 3
-The layers of the network:	[16, 20, 20, 3]
+The layers of the network:	[16, 5, 3]
 The number of training data:	58000
 A example of the feature data:	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 6.0, 1.0, 0.0, -1.0, 1.0, -1.0, -1.0]
 A example of the label data:	[12.0, 12.9, 9.5]

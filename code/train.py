@@ -50,7 +50,7 @@ if not os.path.exists(res_path):
 # Training
 # _, input_size  = training_features.shape
 # _, output_size = training_labels.shape
-network = dbn.DBN(layers=layers, iters=50, batch_size=500, mu=.0005)
+network = dbn.DBN(layers=layers, iters=50, batch_size=100, mu=.0005)
 with tf.Session() as sess:
     tr, test = network.train(sess, training_features, training_labels, testing_features, testing_labels)
     np.savetxt(res_path + 'training_result.txt', tr)
