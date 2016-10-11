@@ -1,2 +1,2 @@
-model_checkpoint_path: "model_para.ckpt"
-all_model_checkpoint_paths: "model_para.ckpt"
+model_checkpoint_path: "filtered_model_para.ckpt"
+all_model_checkpoint_paths: "filtered_model_para.ckpt"
